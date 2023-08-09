@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Rom Ihia</title>
+  <script src="script.js"></script>
+  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+</head>
+
+<body>
+<div id="header">
+  <div class="container">
+    <nav>
+      <img src="Images\LOGO.png" class="logo">
+      <ul id="sidemenu">
+        <li><a href="#header">Home</a></li>
+        <li><a href="#About">About</a></li>
+        <li><a href="#game">Some Game</a></li>
+        <li><a href="#projects">Portfolio</a></li>
+        <li><a href="#contact">Contact</a></li>
+        <i class="fas fa-times" onclick="closemenu()"></i>
+      </ul>
+      <i class="fas fa-bars" onclick="openmenu()"></i>
+    </nav>
+    <div class="heder-text">
+      <p>Software Engineering Student | Software developer & Implementation</p>
+      <h1>Hi, I'm <span>Rom Ihia</span><br> welcome to my site</h1>
+    </div>
+  </div>
+</div>
+
+<!--------------About-------------->
+<div id="About">
+  <div class="container">
+    <div class="row">
+      <div class="about-col-1">
+        <img src="Images\img-2.jpeg" alt="">
+      </div>
+      <div class="about-col-2">
+        <h1 class="sub-title">About Me</h1>
+        <p>Hey there, I'm Rom Ihia – a student in Software Engineering who loves creating cool stuff with code. I'm really good with languages like C++, C, Python, and Java, and I'm super into making programs work smart and fast using Object-Oriented Programming and Data Structures.
+
+          <br>But I'm not just a computer person! When I'm not coding, you can find me lost in music. I play piano, guitar, and drums, and I even make my own music sometimes. Traveling is a big thrill for me too – new places, new adventures.  And I have a passion for photography too - capturing moments with my camera. (as you can see in the picture on the left :)<br>
+          
+          So, why am I excited about software? Well, it's not just about the coding; it's about creating new and awesome things. I want to be part of a team that comes up with cool software solutions, and I'm eager to learn from the pros in the industry.
+          
+          Let's make technology fun, creative, and full of endless possibilities. Join me on this journey where software meets passion!</p>
+      <div class="tab-titles">
+        <p class="tab-links active-link" onclick="opentab('skills')">skills</p>
+        <p class="tab-links" onclick="opentab('Experience')">Experience</p>
+        <p class="tab-links" onclick="opentab('Education')">Education</p>
+      </div>
+      <div class="tab-contents active-tab" id="skills">
+        <ul class="item-list">
+          <li><span>Software Development</span></li>
+          <li><span>Python</span></li>
+          <li><span>Java</span></li>
+          <li><span>C++</span></li>
+          <li><span>C</span></li>
+          <li><span>Data Structures</span></li>
+          <li><span>Object Oriented Programming</span></li>
+          <li><span>Algorithms</span></li>
+          <li><span>Docker</span></li>
+          <li><span>SQLite</span></li>
+          <li><span>Git</span></li>
+          <li><span>PostgreSQL</span></li>
+          <li><span>FastAPI</span></li>
+          <li><span>Open-CV</span></li>
+          <li><span>HTML</span></li>
+          <li><span>CSS</span></li>
+        </ul>
+      </div>
+      <div class="tab-contents" id="Experience">
+        <ul>
+          <li><span>Jan 2023 - Present</span><br>Software Developer &
+            Implementation of Requirements Systems</li>       
+        </ul>
+      </div>
+      <div class="tab-contents" id="Education">
+        <ul>
+          <li><span>2021 – 2025</span><br>B.Sc. in Software Engineering 
+            at S.C.E academic College of Engineering
+            </li>
+            <li><span>2012 - 2017</span><br>New media major 
+              at Ort Naomi Shemer high school
+              <ul>
+                <li> Full diploma</li>
+                <li>Web Design</li>
+              </ul>
+              </li>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!--------------My Game-------------->
+<div id="game">
+  <div class="container">
+    <h1 class="sub-title">Some Game</h1>
+    <h3>🎮 Get Ready for Fun Gaming! 🎮 </h3>
+      <p>I'm excited to share some cool games with you on my website! 
+      <br> games have been seamlessly embedded into the website ,<br> so you can play them without any extra steps. Just click on the game names, and you'll jump right into the action!
+      </p>
+    <div class="tab-titles">
+      <p class="tab-links active-link" onclick="opentab('game1')">Car game</p>
+      <p class="tab-links" onclick="opentab('game2')">Run game</p>
+    </div>
+    <div class="tab-contents active-tab" id="game1">
+      <iframe src="http://www.freeonlinegames.com/embed/149448" width="960" height="600" frameborder="no" scrolling="no"></iframe>
+      <button type="close-button" class="btn"  onclick="closeGame('game1')">Close</button>
+    </div>
+    <div class="tab-contents" id="game2">
+      <iframe src="http://www.freeonlinegames.com/embed/144991" width="800" height="560" frameborder="no" scrolling="no"></iframe>
+      <button type="close-button" class="btn"  onclick="closeGame('game2')">Close</button>
+    </div>
+  </div>
+</div>
+
+
+
+
+<!--------------My projects-------------->
+<div id="projects">
+  <div class="container">
+    <h1 class="sub-title">My Projects</h1>
+    <div class="work-list">
+      <div class="work">
+        <img src="Images\img-1.jpeg">
+      </div>
+    </div>
+  </div>
+</div>
+
+<!--------------contact-------------->
+<div id="contact">
+  <div class="container">
+    <div class="row">
+      <div class="contact-left">
+        <h1 class="sub-title">Contact Me</h1>
+        <p><i class="fas fa-envelope"></i> Email: romihia01@gmail.com</p>
+         <p><i class="fas fa-phone"></i> Phone: 052-5364426</p>
+        <div class="social-icons">
+          <a href="https://www.linkedin.com/in/rom-ihia-python-java-developer/" target="_blank"><i class="fab fa-linkedin"></i></a>
+          <a href="https://github.com/Romihia" target="_blank"><i class="fab fa-github"></i></a>
+          <a href="https://www.instagram.com/your-instagram-profile" target="_blank"><i class="fab fa-instagram"></i></a>
+        </div>
+        <a href="Images\Rom ihia CV.pdf"  download class="btn">Download CV</a>
+      </div>
+      <div class="contact-right">
+        <form name="submit-to-google-sheet">
+          <input type="text" name="name" placeholder="Your Name" required>
+          <input type="email" name="email" placeholder="Your Email" required>
+          <textarea type="Massage" rows="6" placeholder="Your Massage"></textarea>
+          <button type="submit" class="btn">submit</button>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!--------------copyright-------------->
+
+<footer>
+  <div class="container">
+     <p>&copy; 2023 Rom Ihia. All rights reserved.</p>
+  </div>
+</footer>
+
+
+</body>
+
+</html>
+
