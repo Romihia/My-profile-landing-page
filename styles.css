@@ -44,6 +44,7 @@ nav{
   height: auto;
   margin-right: 20px; /* Add spacing between the logo and navigation */
 }
+
 nav ul li{
   display: inline-block;
   list-style: none;
@@ -194,7 +195,7 @@ nav ul li a:hover::after{
 
 /*--------------My Game--------------*/
 #game {
-  margin-top: 100px;
+  margin-top: 450px;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -206,7 +207,7 @@ nav ul li a:hover::after{
   position: absolute;
   top: 10px;
   right: 10px;
-  background-color: #ff0000;
+  background-color: #348ec2;
   color: #ffffff;
   border: none;
   border-radius: 50%;
@@ -223,13 +224,127 @@ nav ul li a:hover::after{
   color: #ababab;
 }
 
+.under_construction{
+  color: #1493dc;
+}
+
+
+
+.slider {
+  width: 100%;
+}
+.slider input {
+  display: none;
+}
+.testimonials {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  min-height: 350px;
+  perspective: 3000px;
+  overflow: hidden;
+}
+.testimonials .item {
+  top: 0;
+  position: absolute;
+  box-sizing: border-box;
+  background-color: #031123;
+  padding: 30px;
+  width: 450px;
+  text-align: center;
+  transition: transform 0.4s;
+  -webkit-transform-style: preserve-3d;
+  box-shadow: 0 0 10px rgba(81, 79, 79, 0.3);
+  user-select: none;
+  cursor: pointer;
+}
+.testimonials .item img {
+  width: 100px;
+  border-radius: 50%;
+  border: 13px solid #348ec2;
+}
+.testimonials .item p {
+  color: #ddd;
+}
+.testimonials .item h2 {
+  font-size: 14px;
+}
+
+/* First */
+#t-1:checked ~ .dots label[for="t-1"] {
+  transform: scale(2);
+  background-color: #fff;
+}
+#t-1:checked ~ .dots label[for="t-2"] {
+  transform: scale(1.5);
+}
+#t-1:checked ~ .testimonials label[for="t-1"] {
+  z-index: 4;
+}
+#t-1:checked ~ .testimonials label[for="t-2"] {
+  transform: translateX(300px) translateZ(-90px) rotateY(-15deg);
+  z-index: 3;
+}
+#t-1:checked ~ .testimonials label[for="t-3"] {
+  transform: translateX(600px) translateZ(-180px) rotateY(-25deg);
+  z-index: 2;
+}
+/* Second */
+#t-2:checked ~ .dots label[for="t-1"] {
+  transform: scale(1.5);
+}
+#t-2:checked ~ .dots label[for="t-2"] {
+  transform: scale(2);
+  background-color: #fff;
+}
+#t-2:checked ~ .dots label[for="t-3"] {
+  transform: scale(1.5);
+}
+#t-2:checked ~ .testimonials label[for="t-1"] {
+  transform: translateX(-300px) translateZ(-90px) rotateY(15deg);
+}
+#t-2:checked ~ .testimonials label[for="t-2"] {
+  z-index: 3;
+}
+#t-2:checked ~ .testimonials label[for="t-3"] {
+  transform: translateX(300px) translateZ(-90px) rotateY(-15deg);
+  z-index: 2;
+}
+
+/* Third */
+#t-3:checked ~ .dots label[for="t-2"] {
+  transform: scale(1.5);
+}
+#t-3:checked ~ .dots label[for="t-3"] {
+  transform: scale(2);
+  background-color: #fff;
+}
+#t-3:checked ~ .dots label[for="t-4"] {
+  transform: scale(1.5);
+}
+#t-3:checked ~ .testimonials label[for="t-1"] {
+  transform: translateX(-600px) translateZ(-180px) rotateY(25deg);
+}
+#t-3:checked ~ .testimonials label[for="t-2"] {
+  transform: translateX(-300px) translateZ(-90px) rotateY(15deg);
+}
+#t-3:checked ~ .testimonials label[for="t-3"] {
+  z-index: 3;
+}
+
+.bio {
+  padding:10px 0;
+  color: #ababab;
+  display: block;
+}
 
 
 
 /*--------------contact--------------*/
 
 #contact {
-  padding: 60px 0;
+  padding: 200px 0;
 }
 
 .container {
@@ -297,6 +412,7 @@ form input ,textarea{
 }
 
 .btn {
+  margin-top: 20px;
    display: inline-block;
    padding: 10px 20px;
    background-color: rgb(22, 81, 153);
@@ -413,6 +529,8 @@ nav .fas {
   .btn {
     padding: 8px 15px;
   }
-}
 
+  #game {
+    display: none; 
+  }
 }
