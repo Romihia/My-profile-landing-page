@@ -41,10 +41,40 @@ form.addEventListener('submit', e => {
 
 
 function closeGame(gameId) {
+  var iframe = document.getElementById('gamiside');
+  iframe.src = '';
   const gameContent = document.getElementById(gameId);
   const gameIframe = gameContent.querySelector('iframe');
-  gameIframe.remove();
+  // gameIframe.remove();
   gameContent.querySelector('.close-button').remove();
 }
 
 
+function loadGame(gameId) {
+  var iframe = document.getElementById('gamiside');
+  if (!iframe.getAttribute('src') && gameId === 'game1') {
+    iframe.src = "http://www.freeonlinegames.com/embed/149448";
+  }
+  if (!iframe.getAttribute('src') && gameId === 'game2') {
+    iframe.src = "http://www.freeonlinegames.com/embed/144991";
+  }
+}
+
+
+
+$items.forEach((item, i) => {
+  item.addEventListener('click', () => {
+    progress = (i / $items.length) * 100 + 10;
+    animate();
+
+    // Toggle the 'selected' class on the clicked item
+    item.classList.toggle('selected');
+
+    // Hide the bio of other items
+    $items.forEach(($item) => {
+      if ($item !== item) {
+        $item.classList.remove('selected');
+      }
+    });
+  });
+});
