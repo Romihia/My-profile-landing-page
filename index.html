@@ -13,7 +13,7 @@
 <div id="header">
   <div class="container">
     <nav>
-      <img src="LOGO.png" class="logo">
+      <img src="Images\LOGO.png" class="logo" style="margin-block-end: auto;">
       <ul id="sidemenu">
         <li><a href="#header">Home</a></li>
         <li><a href="#About">About</a></li>
@@ -36,7 +36,7 @@
   <div class="container">
     <div class="row">
       <div class="about-col-1">
-        <img src="img-2.jpeg" alt="">
+        <img src="Images\img-2.jpeg" alt="">
       </div>
       <div class="about-col-2">
         <h1 class="sub-title">About Me</h1>
@@ -100,20 +100,19 @@
   <div class="container">
     <h1 class="sub-title">Some Game</h1>
     <h3>🎮 Get Ready for Fun Gaming! 🎮 </h3>
-      <p>I'm excited to share some cool games with you on my website! 
-      <br> games have been seamlessly embedded into the website ,<br> so you can play them without any extra steps. Just click on the game names, and you'll jump right into the action!
-      </p>
+    <p>I'm excited to share some cool games with you on my website! 
+      <br>Games have been seamlessly embedded into the website,<br>so you can play them without any extra steps. Just click on the game names, and you'll jump right into the action!
+    </p>
     <div class="tab-titles">
-      <p class="tab-links active-link" onclick="opentab('game1')">Car game</p>
-      <p class="tab-links" onclick="opentab('game2')">Run game</p>
+      <button type="button" class="btn" onclick="closeGame('game1')">Close</button>
+      <button type="button" class="btn" onclick="loadGame('game1')">Open Car game</button>
+      <button type="button" class="btn" onclick="loadGame('game2')">Open Run game</button>
     </div>
     <div class="tab-contents active-tab" id="game1">
-      <iframe src="http://www.freeonlinegames.com/embed/149448" width="960" height="600" frameborder="no" scrolling="no"></iframe>
-      <button type="close-button" class="btn"  onclick="closeGame('game1')">Close</button>
+      <iframe id="gamiside" width="960" height="600" frameborder="no" scrolling="no"></iframe>
     </div>
-    <div class="tab-contents" id="game2">
-      <iframe src="http://www.freeonlinegames.com/embed/144991" width="800" height="560" frameborder="no" scrolling="no"></iframe>
-      <button type="close-button" class="btn"  onclick="closeGame('game2')">Close</button>
+    <div class="tab-contents active-tab" id="game2">
+      <iframe id="gamiside" width="800" height="560" frameborder="no" scrolling="no"></iframe>
     </div>
   </div>
 </div>
@@ -125,13 +124,60 @@
 <div id="projects">
   <div class="container">
     <h1 class="sub-title">My Projects</h1>
-    <div class="work-list">
-      <div class="work">
-        <img src="img-1.jpeg">
-      </div>
-    </div>
   </div>
 </div>
+
+<div class="slider">
+  <input type="radio" name="testimonial" id="t-1" onclick="showBio('bio-1')">
+  <input type="radio" name="testimonial" id="t-2" onclick="showBio('bio-2')" checked>
+  <input type="radio" name="testimonial" id="t-3" onclick="showBio('bio-3')">
+  <div class="testimonials"> 
+    <label class="item" for="t-1">
+      <img src="Images\ai_sport.jpg" alt="picture">
+      <p>PoseSense: Real-time Pose Detection<br>
+          & Mistake Analysis🏋🏽‍♂️</p>
+      <div class="bio">
+        <h3>PoseSense:</h3>
+        <p>
+          Our code magic: watch yourself move in real-time! 🪄✨ Thanks to MediaPipe and OpenCV, we spot special body points, like connect-the-dots for motion. 🕺🔍
+          <br>Imagine a workout buddy that tracks your exercises and dance steps! 🏋️‍♀️💃<br>
+          <h5>To enter a project, click on the Github icon</h5>
+          <a href="https://github.com/Romihia/pose-detection-mistake-analysis" target="_blank"><i class="fab fa-github" style="color:aliceblue;"></i></a>
+        </p>
+      </div>
+    </label>
+    <label class="item" for="t-2">
+      <img src="Images\img-6.jpg" alt="picture">
+      <p>Photo Server📸</p>
+      <div class="bio">
+        <h3>Photo Server:</h3>
+        <p>
+          Get set for Python magic! 🐍✨ Our project mixes SQLite, face_recognition, FastAPI, and Docker to find faces super fast and keep them safe.<br>
+           It's like a speedy face finder and a secret vault rolled into one.
+           <br>Whether you're looking for a face from a list of photos or playing with data, this is tech fun at its finest!⚡🕵️‍♂️</p>
+           <br>
+           <h5 class="under_construction">⏳🚀 We're gearing up for lift-off. Stay tuned! 🌟</h5>
+      </div>
+    </label>
+    <label class="item" for="t-3">
+      <img src="Images\ptoho-car-agency.png" alt="picture">
+      <p>Vehicle Agency🚘🚙</p>
+      <div class="bio">
+        <h3>Vehicle Agency:</h3>
+        <p>
+          Java's magic revealed! ☕🚗 GUI grace, design patterns (Memento, Abstract Factory, Observer, Decorator, Singleton),OOP prowess,
+          plus thread wizardry unite for epic vehicle management. Watch vehicles groove, states saved, styles adorned, all while threads dance in sync.
+          An all-in-one Singleton maestro ensures harmony.Get ready for a Java joyride! 🎩🚀
+          <h5 class="under_construction">⏳🚀 We're gearing up for lift-off. Stay tuned! 🌟</h5>
+        </p>
+      </div>
+    </label>
+</div>
+
+
+
+
+
 
 <!--------------contact-------------->
 <div id="contact">
