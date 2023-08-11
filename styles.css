@@ -224,119 +224,86 @@ nav ul li a:hover::after{
   color: #ababab;
 }
 
-.under_construction{
-  color: #1493dc;
+
+.work-list{
+  display: grid;
+  grid-template-columns: repeat(auto-fit,minmax(250px,1fr));
+  grid-gap: 40px;
+  margin-top: 50px;
 }
 
-
-
-.slider {
+.work{
+  border-radius: 20px;
+  position: relative;
+  overflow: hidden;
+}
+.work img{
   width: 100%;
+  border-radius: 10px;
+  display: block;
+  transition: transfrom 0.5s;
 }
-.slider input {
-  display: none;
-}
-.testimonials {
+
+.layer{
+  width: 100%;
+  height: 0;
+  background: linear-gradient(rgba(0, 0, 0, 0.6),#155b81);
+  border-radius: 10px;
+  position: absolute;
+  left: 0;
+  bottom:0;
+  overflow: hidden;
   display: flex;
   align-items: center;
   justify-content: center;
-  position: relative;
-  min-height: 350px;
-  perspective: 3000px;
-  overflow: hidden;
-}
-.testimonials .item {
-  top: 0;
-  position: absolute;
-  box-sizing: border-box;
-  background-color: #031123;
-  padding: 30px;
-  width: 450px;
+  flex-direction: column;
+  padding: 0 40px;
   text-align: center;
-  transition: transform 0.4s;
-  -webkit-transform-style: preserve-3d;
-  box-shadow: 0 0 10px rgba(81, 79, 79, 0.3);
-  user-select: none;
-  cursor: pointer;
+  font-size: 15px;
+  transition: height 0.5s;
 }
-.testimonials .item img {
-  width: 100px;
+.layer h3{
+  font-weight: 500;
+  margin-bottom: 20px;
+}
+
+.layer a{
+  margin-top: 20px;
+  color:#348ec2;
+  text-decoration: none;
+  font-size: 18px;
+  line-height: 60px;
+  background: #fff;
+  width: 60px;
+  height: 60px;
   border-radius: 50%;
-  border: 13px solid #348ec2;
+  text-align: center;
 }
-.testimonials .item p {
-  color: #ddd;
-}
-.testimonials .item h2 {
-  font-size: 14px;
+.work:hover img{
+  transform: scale(1.1);
 }
 
-/* First */
-#t-1:checked ~ .dots label[for="t-1"] {
-  transform: scale(2);
-  background-color: #fff;
+.work:hover .layer{
+height: 100%;
 }
-#t-1:checked ~ .dots label[for="t-2"] {
-  transform: scale(1.5);
-}
-#t-1:checked ~ .testimonials label[for="t-1"] {
-  z-index: 4;
-}
-#t-1:checked ~ .testimonials label[for="t-2"] {
-  transform: translateX(300px) translateZ(-90px) rotateY(-15deg);
-  z-index: 3;
-}
-#t-1:checked ~ .testimonials label[for="t-3"] {
-  transform: translateX(600px) translateZ(-180px) rotateY(-25deg);
-  z-index: 2;
-}
-/* Second */
-#t-2:checked ~ .dots label[for="t-1"] {
-  transform: scale(1.5);
-}
-#t-2:checked ~ .dots label[for="t-2"] {
-  transform: scale(2);
-  background-color: #fff;
-}
-#t-2:checked ~ .dots label[for="t-3"] {
-  transform: scale(1.5);
-}
-#t-2:checked ~ .testimonials label[for="t-1"] {
-  transform: translateX(-300px) translateZ(-90px) rotateY(15deg);
-}
-#t-2:checked ~ .testimonials label[for="t-2"] {
-  z-index: 3;
-}
-#t-2:checked ~ .testimonials label[for="t-3"] {
-  transform: translateX(300px) translateZ(-90px) rotateY(-15deg);
-  z-index: 2;
-}
-
-/* Third */
-#t-3:checked ~ .dots label[for="t-2"] {
-  transform: scale(1.5);
-}
-#t-3:checked ~ .dots label[for="t-3"] {
-  transform: scale(2);
-  background-color: #fff;
-}
-#t-3:checked ~ .dots label[for="t-4"] {
-  transform: scale(1.5);
-}
-#t-3:checked ~ .testimonials label[for="t-1"] {
-  transform: translateX(-600px) translateZ(-180px) rotateY(25deg);
-}
-#t-3:checked ~ .testimonials label[for="t-2"] {
-  transform: translateX(-300px) translateZ(-90px) rotateY(15deg);
-}
-#t-3:checked ~ .testimonials label[for="t-3"] {
-  z-index: 3;
-}
-
-.bio {
-  padding:10px 0;
-  color: #ababab;
+.btn-pro{
   display: block;
+  margin: 50px auto;
+  width: fit-content;
+  border: 1px solid #1493dc;
+  padding: 14px 50px;
+  border-radius: 6px;
+  text-decoration: none;
+  color: #fff;
+  transition: background 0.5s ;
+}
+
+.btn-pro:hover{
+  background: #1493dc;
+}
+
+.under_construction{
+  color: #f76767;
 }
 
 
@@ -520,6 +487,9 @@ nav .fas {
   .tab-contents {
     padding: 10px;
   }
+  .contact-left ,.contact-right{
+    flex-basis: 100%;
+  }
 
   .contact-right input,
   .contact-right textarea {
@@ -532,5 +502,14 @@ nav .fas {
 
   #game {
     display: none; 
+  }
+
+  #slider{
+    font-size: 14px;
+    padding: 10px 5%;
+    position: absolute;
+    top: 25px;
+    left: 25px;
+    cursor: pointer;
   }
 }
