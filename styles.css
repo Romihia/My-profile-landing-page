@@ -38,7 +38,6 @@ nav{
   display: flex;
   align-items: flex-end; /* Vertically center the logo */
 }
-
 .logo {
   width: 300px; /* Adjust the logo width as needed */
   height: auto;
@@ -77,13 +76,62 @@ nav ul li a:hover::after{
   margin-top: 20%;
   font-size: 30px;
 }
-.heder-text h1{
-  font-size: 60px;
+.heder-text h2{
+  font-size: 40px;
+  font-weight: 500;
   margin-top:  20px;
 }
-.heder-text h1 span{
-  color: #1493dc;
+.heder-text h1{
+  position: relative;
+  font-size: 100px;
+  line-height: 160px;
+  margin-left: -10px;
+  color: transparent;
+  -webkit-text-stroke: 0.5px #fff;
+  background: url("Images\\back.png");
+  -webkit-background-clip: text;
+  background-position: 0 0;
+  animation: back 30s linear infinite,animate 6s linear infinite; 
+  outline: none;
+  margin-top:  20px;
 }
+@keyframes animate{
+  0% ,18% ,20% ,50.1%,60%,65.1%,80%,90.1%,92%{
+    text-shadow: none;
+  }
+  18.1% ,20.1%, 30% ,50%,60.1%,65%,80.1%,90%,92.1%{
+    text-shadow:  0 0 10px ;
+    text-shadow:  0 0 20px #03bcf4;
+    text-shadow:  0 0 40px #03bcf4;
+    text-shadow:  0 0 80px #03bcf4;
+    text-shadow:  0 0 160px #03bcf4;
+  }
+  100%{
+    -webkit-text-stroke: 0.5px #a0daec;
+    text-shadow:  0 0 10px ;
+    text-shadow:  0 0 20px #03bcf4;
+    text-shadow:  0 0 40px #03bcf4;
+    text-shadow:  0 0 80px #03bcf4;
+    text-shadow:  0 0 160px #03bcf4;
+  } 
+
+}
+
+@keyframes back{
+  100%{
+    background-position: 2000px 0;
+  }
+}
+.heder-text h1 span{
+  -webkit-text-stroke: 0.8px #03bcf4;
+}
+
+
+
+
+
+
+
 
 
 /*----------About--------------*/
@@ -162,7 +210,7 @@ nav ul li a:hover::after{
 
 .item-list {
   columns: 3; 
-  column-gap: 50x; 
+  column-gap: 50px; 
   list-style-type: none;
   padding: 0;
 }
@@ -171,8 +219,13 @@ nav ul li a:hover::after{
   margin-bottom: 10px; 
 }
 
+.item-list span{
+  margin-bottom: 10px; 
+}
+
 .tab-contents{
   display: none;
+  margin-top: 20px;
 }
 .tab-contents.active-tab{
   display: block;
@@ -193,7 +246,7 @@ nav ul li a:hover::after{
 }
 
 
-/*--------------My Game--------------*/
+/* --------------My Game--------------
 #game {
   margin-top: 450px;
   display: flex;
@@ -213,7 +266,7 @@ nav ul li a:hover::after{
   border-radius: 50%;
   padding: 5px;
   cursor: pointer;
-}
+} */
 
 
 /*--------------My projects--------------*/
@@ -241,7 +294,7 @@ nav ul li a:hover::after{
   width: 100%;
   border-radius: 10px;
   display: block;
-  transition: transfrom 0.5s;
+  transition: transform 0.5s;
 }
 
 .layer{
@@ -411,13 +464,12 @@ nav .fas {
   display: none;
 }
 
-@media only screen and (max-width: 600px) {
+@media only screen and (max-width: 700px) {
   #header {
     background-image: url(img-4-p.jpeg);
   }
 
   .heder-text {
-    margin-top: 100%;
     font-size: 16px;
   }
 
