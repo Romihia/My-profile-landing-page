@@ -27,10 +27,8 @@ function closemenu() {
 
 
 
-
-const scriptURL = 'https://script.google.com/macros/s/AKfycby8fr5DY4uNIqqCCACkRKHm6yoVrEUkzmntq5FCAtd04BcwfXz_KL6cmiw4m_A_Oz6g/exec'
+const scriptURL = 'https://script.google.com/macros/s/AKfycbw2QRwMkBopZteMdiQWU5vvHvQgNKUfPJvzT16bmR8Mkk7UbAs1p4-4_y2MVs5gP72CDA/exec'
 const form = document.forms['submit-to-google-sheet']
-
 
 form.addEventListener('submit', e => {
   e.preventDefault()
@@ -38,6 +36,9 @@ form.addEventListener('submit', e => {
     .then(response => console.log('Success!', response))
     .catch(error => console.error('Error!', error.message))
 })
+
+
+
 
 
 function closeGame(gameId) {
